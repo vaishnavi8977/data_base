@@ -1,0 +1,30 @@
+
+Use university
+INSERT INTO `faculty` (`fid`, `fname`, `f_designation`, `studies`, `dept_id`) 
+VALUES ('1', ' Dan Brown', 'Head of the department', 'PHD Computers', ' CSE');
+
+INSERT INTO `faculty` (`fid`, `fname`, `f_designation`, `studies`, `dept_id`)
+VALUES ('2', 'Dav Pilkey', 'Professor', 'PHD Computers', ' CSE');
+
+INSERT INTO `faculty` (`fid`, `fname`, `f_designation`, `studies`, `dept_id`)
+VALUES ('3', ' Connie Willis', ' Assistant Professor', 'PHD Computers', 'CSE');
+
+INSERT INTO `registration` (`unh_id`, `First`, `Last`, `Email`, `department`, `specialization`, `fid`) 
+VALUES ('vd1034', 'vaishnavi', 'dade', 'vaishnavi@gmail.com', 'CSE', 'DATA SCIENCE', '1');
+
+INSERT INTO `registration` (`unh_id`, `First`, `Last`, `Email`, `department`, `specialization`, `fid`) 
+VALUES ('102', 'snehitha', 'mamidi', 'snehtha@gmail.com', 'CSE', 'PYTHON', '2');
+
+INSERT INTO `registration` (`unh_id`, `First`, `Last`, `Email`, `department`, `specialization`, `fid`) 
+VALUES ('A12', 'AKILA', 'REDDY', 'akila@gmail.com', 'CSE', 'JAVA', '3');
+
+UPDATE registration SET status= "completed" , feedback= 'Good work. project completed'  WHERE unh_id = 'vd1034';
+
+INSERT INTO project (unh_id, pname, status) VALUES ('102', 'DJANGO', 'no');
+INSERT INTO project (unh_id, pname, status) VALUES ('A12', 'ATM', 'no');
+INSERT INTO project (unh_id, pname, status) VALUES ('A12', 'digital', 'no');
+SELECT * FROM registration JOIN faculty ON registration.fid = faculty.fid JOIN project ON registration.unh_id = project.unh_id;
+UPDATE project SET status= 'pending'  WHERE unh_id = '102' and pname = 'DJANGO';
+UPDATE project SET feedback= 'Design need to be improved'  WHERE pname = 'DJANGO';
+DELETE FROM project WHERE pname='DJANGO';
+DELETE FROM registration WHERE unh_id='102';

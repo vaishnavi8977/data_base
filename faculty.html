@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <title>Faculty Portal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assests/css/style.css">
+</head>
+<body>
+    <div class="signup-form">
+        <form action="faculty_reg.php" method="post" enctype="multipart/form-data">
+            <h2>Register</h2>
+            <p class="hint-text">Create your account</p>
+            <div class="form-group">
+                <input type="text" class="form-control" name="fid" placeholder="UNH ID" required="required">
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col"><input type="text" class="form-control" name="fname" placeholder="Name" required="required"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="dept_id">Select the Department:</label>
+                <select name="dept_id" id="department">
+                    <option value="CSE"> Computer Science </option>
+                    <option value="ECE"> Electronics and Communication Engineering </option>
+                    <option value="EEE"> Electrical and Electronics Engineering </option>
+                    <option value="MECH"> Mechanical Engineering </option>
+                    <option value="CIVIL"> Civil Engineering </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="studies" placeholder="Eduction">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="f_designation" placeholder="Designation">
+            </div>
+            <div class="form-group">
+                <button type="submit" name="save" class="btn btn-success btn-lg btn-block">Register Now</button>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>
